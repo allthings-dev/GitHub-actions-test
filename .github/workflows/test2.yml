@@ -3,7 +3,7 @@ name: Call a reusable workflows
 on:
   push:
     paths:
-      - 'test2.yml'
+      - '.github/workflows/test2.yml'
 
 jobs:
   call-workflow:
