@@ -6,5 +6,7 @@ on:
       - '.github/workflows/test2.yml'
 
 jobs:
-  call-workflow:
+  reuse1:
     uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/reusable-workflow-1.yml@main
+  reuse2:
+    uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/reusable-workflow-2.yml@main
