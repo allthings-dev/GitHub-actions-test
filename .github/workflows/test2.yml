@@ -12,4 +12,4 @@ jobs:
     uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/reusable-workflow-2.yml@main
     needs: [reuse1]
     with:
-      someinput: ${{ toJSON(needs.reuse1.outputs) }}
+      someinput: ${{ toJSON(needs.reuse1.result) }}
