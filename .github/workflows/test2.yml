@@ -9,7 +9,7 @@ jobs:
   reuse1:
     uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/reusable-workflow-1.yml@main
     with:
-      donotfail: false
+      donotfail: true
   reuse2:
     uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/reusable-workflow-2.yml@main
     needs: [reuse1]
