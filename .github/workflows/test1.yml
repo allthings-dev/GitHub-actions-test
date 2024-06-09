@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "::remove-matcher regexp=Node.js 16 actions are deprecated.*::"
       - name: Check out repository code
         uses: actions/checkout@v3.6.0
       - name: List files in the repository
