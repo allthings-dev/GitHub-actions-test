@@ -18,6 +18,6 @@ jobs:
       run: |
         echo "Starting step"
         echo pwd is $(pwd)
-        echo List of files in curernt dir:
-        ls
+        echo List of files in root dir:
+        ls /
         echo Done
