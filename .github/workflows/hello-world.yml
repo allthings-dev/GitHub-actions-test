@@ -1,6 +1,4 @@
-name: Print Github Context
-
-on: push:
+on: push
 
 jobs:
   Github-Context:
