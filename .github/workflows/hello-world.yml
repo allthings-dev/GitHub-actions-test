@@ -1,6 +1,13 @@
 name: Hello World
 run-name: Hello World Instance
-on: push
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  push:
+    branches:
+      - main
   
 jobs:
   HelloWorldJob:
