@@ -13,12 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Echo Step
-      run: echo "Hello World"
-    - name: Multi Step
-      run: |
-        #!/bin/bash
-        set -x
-        echo "--------------------Starting--------------------"
-        echo pwd is $(pwd)
-        date -u -Iseconds
-        echo "----------------------Done----------------------"
+      run: echo ${{ toJSON(github) }}
+    
