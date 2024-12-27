@@ -1,17 +1,9 @@
-name: Hello World
-run-name: Hello World Instance
+name: Print Github Context
 
-on:
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-  push:
-    branches:
-      - main
-  
+on: push:
+
 jobs:
-  HelloWorldJob:
+  Github-Context:
     runs-on: ubuntu-latest
     steps:
-    - name: Echo Step
-      run: echo "${{ toJSON(github) }}"
-    
+    - run: echo "${{ toJSON(github) }}"
