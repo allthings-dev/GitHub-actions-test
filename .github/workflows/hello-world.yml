@@ -16,8 +16,7 @@ jobs:
       run: echo "Hello World"
     - name: Multi Step
       run: |
-        echo "Starting step"
+        echo -- Starting step --
         echo pwd is $(pwd)
-        echo List of files in root dir:
-        ls /
-        echo Done
+        date -u -Iseconds
+        echo -- Done --
