@@ -1,7 +1,6 @@
 name: Hello World
 run-name: Hello World Instance
-on:
-  push
+on: push
   
 jobs:
   HelloWorldJob:
