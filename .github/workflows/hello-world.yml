@@ -14,3 +14,10 @@ jobs:
     steps:
     - name: Echo Step
       run: echo "Hello World"
+    - name: Multi Step
+      run: |
+        echo "Starting step"
+        echo pwd is $(pwd)
+        echo List of files in curernt dir:
+        ls
+        echo Done
