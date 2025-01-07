@@ -13,3 +13,5 @@ jobs:
     steps:
       - run: |
           echo city is "${{ env.city_name }}"
+          echo "${{ env.city_name }}" | sed 's/\(.\)/\1 /g'
+          echo done
