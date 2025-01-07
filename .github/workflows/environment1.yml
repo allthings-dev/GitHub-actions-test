@@ -1,0 +1,13 @@
+# Environment Demo
+
+name: Environment Demo
+run-name: Environment Demo
+on: workflow_dispatch
+  
+jobs:
+  github-context:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: |
+          echo github context is ${{ toJSON(github) }}
