@@ -1,3 +1,5 @@
+name: Hello World
+run-name: Hello World
 on: 
   push:
     paths:
