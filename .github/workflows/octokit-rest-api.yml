@@ -5,9 +5,9 @@ on: workflow_dispatch
 
 jobs:
   get-workflows:
-    runs-on; ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-    - name: Hit RESt api
+    - name: Hit REST api
       uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.city2 }}
