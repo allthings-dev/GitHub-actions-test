@@ -3,6 +3,8 @@
 name: Environment Demo
 run-name: Environment Demo
 on: workflow_dispatch
+env:
+  city_name: ${{ secrets.city }}
   
 jobs:
   github-context:
@@ -10,4 +12,4 @@ jobs:
     environment: staging
     steps:
       - run: |
-          echo github context is "${{ toJSON(github) }}"
+          echo city is "${{ env.city_name }}"
