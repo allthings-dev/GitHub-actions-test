@@ -12,7 +12,7 @@ jobs:
       with:
         github-token: ${{ secrets.city2 }}
         script: |
-          response = await octokit.request('GET /repos/{owner}/{repo}/actions/workflows', {
+          response = await github.request('GET /repos/{owner}/{repo}/actions/workflows', {
                                     owner: 'allthings-dev',
                                     repo: 'github-actions-reusable-workflows',
                                     headers: {
