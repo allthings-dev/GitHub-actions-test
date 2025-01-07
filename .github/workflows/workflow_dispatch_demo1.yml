@@ -1,0 +1,12 @@
+# Workflow Dispatch Demo
+
+name: Workflow Dispatch Demo
+run-name: Workflow Dispatch Demo
+on: workflow_dispatch
+  
+jobs:
+  github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo github context is ${{ github }}
