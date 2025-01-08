@@ -1,3 +1,15 @@
+# The job context is only meaningful in a step of currently running job and does not have information about any otehr job. 
+# Check needs context for info on otehr jobs
+# The steps context will be {} if steps do not have any id. When id is added, then steps will have data like below 
+# where key "step-four" is step-id 
+# Note that when step fails and continue-on-error=true, then outcome=failure, but conclusion=success
+# step-four: {
+#    outputs: {},
+#    outcome: failure,
+#    conclusion: success
+#  }
+
+
 name: Job and Steps Context
 run-name: Job and Steps Context
 on: workflow_dispatch
