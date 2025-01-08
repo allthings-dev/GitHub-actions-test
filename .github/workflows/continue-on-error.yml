@@ -1,0 +1,29 @@
+name: Continue On Error
+run-name: Continue On Error
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+      run: echo "This is step 1"
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+      run: echo "This is step 1"
+    - name: step2
+      run: |
+        if [[ ${{github.run_attempt}} -gt 1 ]]; then
+          invalid-command
+        fi
+    - name: step3
+      run: echo "This is step 3"
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+      run: echo "This is step 1"
