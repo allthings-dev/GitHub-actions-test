@@ -1,0 +1,12 @@
+name: Job If
+on: workflow_dispatch
+jobs:
+  real-deploy:
+    if: ${{github.run_attempt <= 2 && github.repository == 'allthings-dev/GitHub-actions-test' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+      - run: npm install -g bats
