@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo github context is ${{ toJSON(github) }}
+          echo github context is "${{ toJSON(github) }}"
