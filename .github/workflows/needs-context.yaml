@@ -16,7 +16,7 @@ jobs:
     steps:
     - id: step1
       name: step2
-      run: echo needs context is "${{toJSON(needs}}"
+      run: echo needs context is "${{toJSON(needs)}}"
     - name: step2
       run: invalid-command
       
@@ -25,4 +25,4 @@ jobs:
     needs: [job2]
     steps:
     - name: step1
-      run: echo needs context is "${{toJSON(needs}}"
+      run: echo needs context is "${{toJSON(needs)}}"
