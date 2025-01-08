@@ -1,5 +1,5 @@
-# Scenario: 3 jobs are dependenct on each otehr sequentially
-# Finding: When job 2 fails, then job 3 is skipepd and teh workflow itself is marked as failure
+# Scenario: 3 jobs are dependenct on each other sequentially and job2 has continue-on-error=true
+# Finding: When job 2 fails, then job 3 still runs and teh workflow itself is marked as sucecssful
 name: Needs Job Continue On Error Demo
 run-name: Needs Job Continue On Error Demo
 on: workflow_dispatch
