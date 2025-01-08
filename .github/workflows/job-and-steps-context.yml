@@ -25,6 +25,7 @@ jobs:
       run: echo steps context is "${{toJSON(steps)}}"
     - name: failing-step
       run: invalid command
+      continue-on-error: true
     - name: step5
       run: echo job context is "${{toJSON(job)}}"
     - name: step6
