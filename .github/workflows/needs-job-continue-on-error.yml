@@ -1,7 +1,7 @@
 # Scenario: 3 jobs are dependenct on each otehr sequentially
 # Finding: When job 2 fails, then job 3 is skipepd and teh workflow itself is marked as failure
-name: Needs Failure Demo
-run-name: Needs Failure Demo
+name: Needs Job Continue On Error Demo
+run-name: Needs Job Continue On Error Demo
 on: workflow_dispatch
 
 jobs:
