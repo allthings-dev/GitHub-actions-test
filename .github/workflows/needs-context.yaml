@@ -1,0 +1,28 @@
+name: Needs Context
+run-name: Needs Context
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+      run: echo "This is step 1"
+
+  job2:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    needs: [job1]
+    steps:
+    - id: step1
+      name: step2
+      run: echo needs context is "${{toJSON(needs}}"
+    - name: step2
+      run: invalid-command
+      
+  job3:
+    runs-on: ubuntu-latest
+    needs: [job2]
+    steps:
+    - name: step1
+      run: echo needs context is "${{toJSON(needs}}"
