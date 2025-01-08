@@ -1,7 +1,7 @@
-# Environment Demo
+# Env Demo
 
-name: Environment Demo
-run-name: Environment Demo
+name: Env Demo
+run-name: Env Demo
 on: workflow_dispatch
 env:
   branch: ${{ github.ref == 'refs/heads/main' && 'value_for_main_branch' || 'value_for_other_branches' }}
