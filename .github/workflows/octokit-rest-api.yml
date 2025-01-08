@@ -19,5 +19,5 @@ jobs:
                                       'X-GitHub-Api-Version': '2022-11-28'
                                     }
                                   })
-          console.log("response: " , JSON.stringify(response), null, 2);
+          console.log("response: " , JSON.stringify(response, null, 2));
 
