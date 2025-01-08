@@ -1,5 +1,7 @@
 # Scenario: Here 3 jobs are in parallel.  In Job 2, the 2nd step fails on 2nd attempt. 
-# Finding: Since jobs are in paralle, job 3 runs successfully eevn if job 2 fails on 2nd attempt. When step 2 of job 2 fails, step 3 is skipped and the job itself is marked as failure.
+# Finding: Since jobs are in paralle, job 3 runs successfully even when job 2 fails on 2nd attempt. 
+#          When step 2 of job 2 fails, step 3 is skipped and the job itself is marked as failure.
+#          When job 2 fails, workflow is marked as failure
 name: Job And Step Failure Scenario 1
 run-name: Job And Step Failure Scenario 1
 on: workflow_dispatch
