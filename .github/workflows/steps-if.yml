@@ -1,0 +1,17 @@
+name: Steps If
+run-name: Steps If
+on: workflow_dispatch
+
+jobs:
+  smoking:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Run smoke tests
+        if: ${{ !contains(github.event.ref, 'main') }}
+        run: |
+          echo 'Smoke Test not requested'
+          exit 1
+          - name: Run smoke tests
+      - name: Validate 
+        run: |
+          echo 'Validate'
