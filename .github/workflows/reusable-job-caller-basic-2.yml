@@ -1,0 +1,11 @@
+name: Reusable Job Caller Basic 2
+run-name: Reusable Job Caller Basic 2
+on: workflow_dispatch
+
+jobs:
+  greeter-job:
+    uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/basic-reusable-job1.yml@main
+    with:
+      dept: HR
+    secrets:
+      city: hyderabad
