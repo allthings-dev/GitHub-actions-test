@@ -1,0 +1,7 @@
+name: Reusable Job Caller Basic 1
+run-name: Reusable Job Caller Basic 1
+on: workflow_dispatch
+
+jobs:
+  greeter-job:
+    uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/basic-reusable-job1.yml@main
