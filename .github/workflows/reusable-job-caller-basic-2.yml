@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   greeter-job:
-    uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/basic-reusable-job1.yml@main
+    uses: allthings-dev/github-actions-reusable-workflows/.github/workflows/basic-reusable-job2.yml@main
     with:
       dept: HR
     secrets:
